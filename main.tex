@@ -10,6 +10,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage[backend=biber, style=alphabetic]{biblatex}
 
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}
@@ -21,7 +23,12 @@
 \theoremstyle{remark}
 \newtheorem{rmk}[thm]{Remark}
 
+\addbibresource{main.bib}
+\newcommand{\citestacks}[1]%
+{\cite[\href{https://stacks.math.columbia.edu/tag/#1}{Tag #1}]{stacks-project}}
+
 \begin{document}
 
+\printbibliography
 \end{document}
 
